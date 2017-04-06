@@ -5,6 +5,7 @@ let joeSmith: [String: Any] = ["fullName": "Joe Smith", "height": 42, "hasExperi
 let jillTanner: [String: Any] = ["fullName": "Jill Tanner", "height": 36, "hasExperience": true, "guardianName(s)": "Clara Tanner"]
 
 let billBonn: [String: Any] = ["fullName": "Bill Bon", "height": 43, "hasExperience": true, "guardianName(s)": "Sara and Jenny Bon"]
+
 let evaGordon: [String: Any] = ["fullName": "Eva Gordon", "height": 45, "hasExperience": false, "guardianName(s)": "Wendy and Mike Gordon"]
 
 let mattGill: [String: Any] = ["fullName": "Matt Gill", "height": 40, "hasExperience": false, "guardianName(s)": "Charles and Sylvia Gill"]
@@ -33,3 +34,9 @@ let phillipHelm: [String: Any] = ["fullName": "Phillip Helm", "height": 44, "has
 let lesClay: [String: Any] = ["fullName": "Les Clay", "height": 42, "hasExperience": true, "guardianName(s)": "Wynona Brown"]
 
 let herschelKrustofski: [String: Any] = ["fullName": "Herschel Krustofski", "height": 45, "hasExperience": true, "guardianName(s)": "Hyman and Rachel Krustofski"]
+
+//Collection of players
+
+let players = [joeSmith, jillTanner, billBonn, evaGordon, mattGill, kimmyStein, sammyAdams, karlSaygan, suzaneGreenberg, salDali, joeKavalier, benFinkelstein, diegoSoto, chloeAlaska, arnoldWillis, phillipHelm, lesClay, herschelKrustofski]
+players.count
+players[0]["height"]
