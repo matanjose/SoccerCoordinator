@@ -38,5 +38,38 @@ let herschelKrustofski: [String: Any] = ["fullName": "Herschel Krustofski", "hei
 //Collection of players
 
 let players = [joeSmith, jillTanner, billBonn, evaGordon, mattGill, kimmyStein, sammyAdams, karlSaygan, suzaneGreenberg, salDali, joeKavalier, benFinkelstein, diegoSoto, chloeAlaska, arnoldWillis, phillipHelm, lesClay, herschelKrustofski]
-players.count
-players[0]["height"]
+
+//Sorting the players into experience-balanced teams
+
+var teamSharks: [[String : Any]] = []
+var teamDragons: [[String : Any]] = []
+var teamRaptors: [[String : Any]] = []
+
+for player in players {
+    let experienced = "\(player["hasExperience"]!)"
+    switch experienced {
+    case "true":
+        if teamSharks.count <= teamRaptors.count && teamSharks.count <= teamDragons.count
+             {
+            teamSharks.append(player)
+        } else {
+            if teamRaptors.count <= teamSharks.count && teamRaptors.count <= teamDragons.count  {
+                teamRaptors.append(player)
+            } else {
+                teamDragons.append(player)
+            }
+        }
+    case "false":
+        if teamSharks.count <= teamRaptors.count && teamSharks.count <= teamDragons.count {
+            teamSharks.append(player)
+        } else {
+            if teamRaptors.count <= teamSharks.count && teamRaptors.count <= teamDragons.count {
+                teamRaptors.append(player)
+            } else {
+                teamDragons.append(player)
+            }
+        }
+    default:
+        break
+    }
+}
