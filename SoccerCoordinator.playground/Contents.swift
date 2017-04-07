@@ -51,7 +51,7 @@ for player in players {
     case "true":
         if teamSharks.count <= teamRaptors.count && teamSharks.count <= teamDragons.count
              {
-            teamSharks.append(player)
+                teamSharks.append(player)
         } else {
             if teamRaptors.count <= teamSharks.count && teamRaptors.count <= teamDragons.count  {
                 teamRaptors.append(player)
@@ -75,12 +75,8 @@ for player in players {
 }
 
 //Write the letters
-/* Part 3: ** Create logic that iterates through all three teams of players and generates a personalized letter to the guardians, letting them know which team the child has been placed on and when they should attend their first team team practice. As long as you provide the necessary information (player name, team name, guardian names, practice date/time), feel free to have fun with the content of the letter. The team practice dates/times are as follows:
- 
- Dragons - March 17, 1pm
- Sharks - March 17, 3pm
- Raptors - March 18, 1pm
- */
+//creating the personalized letters and storing them in a collection named letters
+
 var letters: [String] = []
 
 for player in teamDragons {
@@ -100,6 +96,7 @@ for player in teamRaptors {
     letters.append(letter)
 }
 
+//printing the personalized letters that were created and stored in lettrs collection
 for letter in letters {
     print(letter)
 }
