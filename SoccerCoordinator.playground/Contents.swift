@@ -73,3 +73,33 @@ for player in players {
         break
     }
 }
+
+//Write the letters
+/* Part 3: ** Create logic that iterates through all three teams of players and generates a personalized letter to the guardians, letting them know which team the child has been placed on and when they should attend their first team team practice. As long as you provide the necessary information (player name, team name, guardian names, practice date/time), feel free to have fun with the content of the letter. The team practice dates/times are as follows:
+ 
+ Dragons - March 17, 1pm
+ Sharks - March 17, 3pm
+ Raptors - March 18, 1pm
+ */
+var letters: [String] = []
+
+for player in teamDragons {
+    
+    var letter = "Dear \(player["guardianName(s)"]!),, We're so excited that \(player["fullName"]!) is going to be joining the Dragons this year! Make sure they are ready to go with cleats, shin guards and water bottle for their first team practice: March 17, 1pm at Cold Spring Park. If you have any questions or concerns please feel free to give our administrator, Mike Grubitz a call at 617-555-1212. All the best! Coach Spiers"
+    letters.append(letter)
+    
+}
+
+for player in teamSharks {
+    var letter = "Dear \(player["guardianName(s)"]!), We're so excited that \(player["fullName"]!) is going to be joining the Sharks this year! Make sure they are ready to go with cleats, shin guards and water bottle for their first team practice: March 17, 1pm at Cold Spring Park. If you have any questions or concerns please feel free to give our administrator, Mike Grubitz a call at 617-555-1212. All the best! Coach Spiers"
+    letters.append(letter)
+}
+
+for player in teamRaptors {
+    var letter = "Dear \(player["guardianName(s)"]!), We're so excited that \(player["fullName"]!) is going to be joining the Raptors this year! Make sure they are ready to go with cleats, shin guards and water bottle for their first team practice: March 17, 1pm at Cold Spring Park. If you have any questions or concerns please feel free to give our administrator, Mike Grubitz a call at 617-555-1212. All the best! Coach Spiers"
+    letters.append(letter)
+}
+
+for letter in letters {
+    print(letter)
+}
